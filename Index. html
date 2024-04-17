@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Sharing Platform</title>
+</head>
+<body>
+    <!-- Registration Form -->
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Login Form -->
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Video Upload Form -->
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="videoFile" accept="video/*" required>
+        <input type="text" name="title" placeholder="Video Title" required>
+        <textarea name="description" placeholder="Video Description"></textarea>
+        <button type="submit">Upload Video</button>
+    </form>
+
+    <!-- Display Videos -->
+    <div id="video-list">
+        <!-- Fetch and display videos from the database -->
+        <!-- Each video thumbnail should link to its playback page -->
+    </div>
+
+    <!-- Video Player -->
+    <video controls>
+        <source src="/videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Backend (Server-Side) -->
+    <!-- Set up routes and handle requests using a server-side language (e.g., Node.js, Python) -->
+    <!-- Implement user authentication, video storage, and database interactions -->
+
+    <!-- Database Schema (simplified) -->
+    <!-- Users table: id, username, email, hashed_password -->
+    <!-- Videos table: id, title, description, filename, user_id -->
+
+    <!-- Remember to handle security (e.g., input validation, authentication, authorization) -->
+</body>
+</html>
